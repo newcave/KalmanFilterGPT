@@ -7,7 +7,7 @@ np.random.seed(0)
 def get_water():
     """Measuring Data."""
     v = np.random.normal(0, 2)
-    water_true = 14.4
+    water_true = 500.0
     z_water_meas = water_true + v
     return z_water_meas
 
@@ -42,10 +42,10 @@ def app():
     st.title("칼만필터학습기 by KSH & ChatGPT")
  
     sidebar = st.sidebar
-    time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=28, value=10, step=1)
+    time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=48, value=10, step=1)
     dt = sidebar.slider("Time step (hrs.)", min_value=0.1, max_value=1.0, value=0.2, step=0.1)
-    x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=200.0, value=75.0, step=10.0)
-    P_0 = sidebar.slider("Initial error covariance estimate", min_value=0.0, max_value=200.0, value=90.0, step=0.5)
+    x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=2000.0, value=650.0, step=10.0)
+    P_0 = sidebar.slider("Initial error covariance estimate", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
 
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
