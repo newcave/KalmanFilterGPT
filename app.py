@@ -73,8 +73,8 @@ def app():
     ax.set_ylabel('Streamflow [CMS]')
     
     # y축 범위 지정하여 고정하기 
-    if sidebar.checkbox("고정 y축 범위", value=False):
-        ymin, ymax = sidebar.slider("y축 범위", 0.0, 200.0, (0.0, 200.0))
+    if sidebar.checkbox("체크시 y축 범위 지정", value=False):
+        ymin, ymax = sidebar.slider("y축 범위", 0, 200, (0, 200))
         ax.set_ylim(ymin, ymax)
     st.pyplot(fig)
 
