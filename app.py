@@ -49,6 +49,9 @@ def app():
     P_0 = sidebar.slider("Init. err. covariance estimate [초기 공분산 추정치, 시스템을 잘 모르면 큰 값]", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
     variance = sidebar.slider("Standard Deviation of Data(for generation) [가상의 측정자료의 표준편차]", min_value=0.0, max_value=10.0, value=2.0, step=0.5)
 
+    # 스케일 고정 코드 
+    scale_fixed = sidebar.checkbox("Graph Scale ", value=False)
+    
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
     water_meas_save = np.zeros(n_samples)
