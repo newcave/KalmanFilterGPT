@@ -34,7 +34,7 @@ def kalman_filter(z_meas, x_esti, P):
     return x_esti, P
 
 # Define Streamlit app.
-def app():
+#def app():
     st.title("Kalman Filter Example")
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (seconds)", min_value=1, max_value=20, value=10, step=1)
