@@ -36,16 +36,17 @@ def kalman_filter(z_meas, x_esti, P):
 # Define Streamlit app.
 def app():
    
-   # st.set_page_config(page_title="Kalman Filter Example", page_icon=":bar_chart:", layout="wide")
+    st.beta_set_page_config(page_title="Kalman Filter 학습기 by KSH x ChatGPT", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
     st.sidebar.title("Kalman Filter Settings")
+    st.sidebar.markdown("# Kalman Filter Example")
     st.title("Kalman Filter 학습기 made by KSH & ChatGPT")
  
     sidebar = st.sidebar
-    time_end = sidebar.slider("Time end (seconds)", min_value=1, max_value=20, value=10, step=1)
-    dt = sidebar.slider("Time step (seconds)", min_value=0.1, max_value=1.0, value=0.2, step=0.1)
-    x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=20.0, value=12.0, step=0.1)
-    P_0 = sidebar.slider("Initial error covariance estimate", min_value=0.0, max_value=20.0, value=6.0, step=0.1)
+    time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=28, value=10, step=1)
+    dt = sidebar.slider("Time step (hrs.)", min_value=0.1, max_value=1.0, value=0.2, step=0.1)
+    x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=200.0, value=12.0, step=0.1)
+    P_0 = sidebar.slider("Initial error covariance estimate", min_value=0.0, max_value=200.0, value=6.0, step=0.1)
 
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
@@ -67,8 +68,8 @@ def app():
     ax.plot(time, water_esti_save, 'bo-', label='Kalman Filter')
     ax.legend(loc='upper left')
     ax.set_title('Measurements v.s. Estimation (Kalman Filter)')
-    ax.set_xlabel('Time [sec]')
-    ax.set_ylabel('Streamlow [Q-ND]')
+    ax.set_xlabel('Time [hrs.]')
+    ax.set_ylabel('Streamlow [CMS]')
     st.pyplot(fig)
 
 if __name__ == '__main__':
