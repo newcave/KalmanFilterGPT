@@ -36,11 +36,11 @@ def kalman_filter(z_meas, x_esti, P):
 # Define Streamlit app.
 def app():
    
-    st.beta_set_page_config(page_title="Kalman Filter 학습기 by KSH x ChatGPT", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
+#   st.beta_set_page_config(page_title="Kalman Filter", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
     st.sidebar.title("Kalman Filter Settings")
     st.sidebar.markdown("# Kalman Filter Example")
-    st.title("Kalman Filter 학습기 made by KSH & ChatGPT")
+    st.title("칼만필터학습기 by KSH & ChatGPT")
  
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=28, value=10, step=1)
