@@ -38,8 +38,7 @@ def app():
    
 #   st.beta_set_page_config(page_title="Kalman Filter", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
-    st.sidebar.title("Kalman Filter Settings")
-    st.sidebar.markdown("# Kalman Filter Example")
+    st.sidebar.markdown("# Kalman Filter Setting")
     st.title("칼만필터학습기 by KSH & ChatGPT")
  
     sidebar = st.sidebar
