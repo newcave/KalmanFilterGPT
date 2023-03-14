@@ -65,3 +65,6 @@ def app():
     ax.set_xlabel('Time [sec]')
     ax.set_ylabel('Streamlow [Q-ND]')
     st.pyplot(fig)
+
+if __name__ == '__main__':
+    app()
