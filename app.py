@@ -43,7 +43,7 @@ def app():
     st.title("칼만필터학습기 by KSH x ChatGPT")
  
     sidebar = st.sidebar
-    variance = sidebar.slider("Standard Deviation of Data(for making)", min_value=0, max_value=10, value=2, step=1)
+    variance = sidebar.slider("Standard Deviation of Data(for making)", min_value=0.0, max_value=10.0, value=2.0, step=1.0)
     time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=48, value=10, step=1)
     dt = sidebar.slider("Time step (hrs.)", min_value=0.1, max_value=1.0, value=0.4, step=0.1)
     x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=1000.0, value=110.0, step=10.0)
