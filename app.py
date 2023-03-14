@@ -47,7 +47,7 @@ def app():
     dt = sidebar.slider("Time step (hrs.) [분석할 간격, 빈도]", min_value=0.1, max_value=1.0, value=0.5, step=0.1)
     x_0 = sidebar.slider("Initial Streamflow estimate [초기 유량 추정치]", min_value=50.0, max_value=150.0, value=105.0, step=5.0)
     P_0 = sidebar.slider("Init. err. covariance estimate [초기 공분산 추정치, 시스템을 잘 모르면 큰 값]", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
-    variance = sidebar.slider("Standard Deviation of Data(for generation) [가상의 측정자료의 표준편차]", min_value=0.0, max_value=10.0, value=2.0, step=1.0)
+    variance = sidebar.slider("Standard Deviation of Data(for generation) [가상의 측정자료의 표준편차]", min_value=0.0, max_value=10.0, value=2.0, step=0.2)
 
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
