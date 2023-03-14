@@ -39,7 +39,7 @@ def app():
    # st.set_page_config(page_title="Kalman Filter Example", page_icon=":bar_chart:", layout="wide")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
     st.sidebar.title("Kalman Filter Settings")
-    st.title("Kalman Filter Example")
+    st.title("Kalman Filter 학습기 made by KSH & ChatGPT")
  
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (seconds)", min_value=1, max_value=20, value=10, step=1)
