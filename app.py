@@ -43,7 +43,7 @@ def app():
     st.title("칼만필터학습기 by KSH x ChatGPT")
  
     sidebar = st.sidebar
-    time_end = sidebar.slider("Time end (hrs.) [분석할 시간]", min_value=1, max_value=48, value=10, step=1)
+    time_end = sidebar.slider("Time end (hrs.) [분석할 시간]", min_value=1, max_value=48, value=12, step=1)
     dt = sidebar.slider("Time step (hrs.) [분석할 빈도]", min_value=0.1, max_value=1.0, value=0.4, step=0.1)
     x_0 = sidebar.slider("Initial Streamflow estimate [초기 유량 추정치]", min_value=0.0, max_value=1000.0, value=110.0, step=10.0)
     P_0 = sidebar.slider("Init. err. covariance estimate [초기 공분산 추정치, 시스템을 잘 모르면 큰 값]", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
