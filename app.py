@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 np.random.seed(0)
 
-def get_water():
+def get_water(variance):
     """Measuring Data."""
     # variance = 2
     v = np.random.normal(0, variance)
