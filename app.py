@@ -37,7 +37,7 @@ def kalman_filter(z_meas, x_esti, P):
 def app():
    
    # st.set_page_config(page_title="Kalman Filter Example", page_icon=":bar_chart:", layout="wide")
-   # st.sidebar.image("logo-ailab.png", use_column_width=True)
+    st.sidebar.image("logo-ailab.png", use_column_width=True)
     st.sidebar.title("Kalman Filter Settings")
     st.title("Kalman Filter Example")
  
