@@ -35,8 +35,12 @@ def kalman_filter(z_meas, x_esti, P):
 
 # Define Streamlit app.
 def app():
-    st.title("Kalman Filter Example")
+    
+    st.set_page_config(page_title="Kalman Filter Example", page_icon=":bar_chart:", layout="wide")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
+    st.sidebar.title("Kalman Filter Settings")
+    st.title("Kalman Filter Example")
+ 
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (seconds)", min_value=1, max_value=20, value=10, step=1)
     dt = sidebar.slider("Time step (seconds)", min_value=0.1, max_value=1.0, value=0.2, step=0.1)
