@@ -2,7 +2,7 @@ import streamlit as st
 
 import numpy as np
 
-import streamlit.pyplot as plt
+#import streamlit.pyplot as plt
 import matplotlib.pyplot as plt
 
 #import streamlit as st
