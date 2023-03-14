@@ -56,7 +56,7 @@ def app():
 
     x_esti, P = None, None
     for i in range(n_samples):
-        z_meas = get_water()
+        z_meas = get_water(variance)
         if i == 0:
             x_esti, P = x_0, P_0
         else:
