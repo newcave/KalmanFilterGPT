@@ -51,8 +51,8 @@ def app():
 
     # y축 범위 지정하여 고정하기 
     if sidebar.checkbox("고정 y축 범위", value=False):
-    ymin, ymax = sidebar.slider("y축 범위", 0.0, 200.0, (0.0, 200.0))
-    ax.set_ylim(ymin, ymax)
+        ymin, ymax = sidebar.slider("y축 범위", 0.0, 200.0, (0.0, 200.0))
+        ax.set_ylim(ymin, ymax)
 
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
