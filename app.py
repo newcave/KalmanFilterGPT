@@ -50,7 +50,7 @@ def app():
     variance = sidebar.slider("Standard Deviation of Data(for generation) [가상의 측정자료의 표준편차]", min_value=0.0, max_value=10.0, value=2.0, step=0.5)
 
     # 스케일 고정 코드 
-    scale_fixed = sidebar.checkbox("Graph Scale ", value=False)
+    fix_y_scale = sidebar.checkbox("Fix Y-axis scale")
     
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
