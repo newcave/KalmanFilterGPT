@@ -43,7 +43,7 @@ def app():
  
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=48, value=10, step=1)
-    dt = sidebar.slider("Time step (hrs.)", min_value=0.1, max_value=1.0, value=0.2, step=0.1)
+    dt = sidebar.slider("Time step (hrs.)", min_value=0.1, max_value=1.0, value=0.4, step=0.1)
     x_0 = sidebar.slider("Initial Streamflow estimate", min_value=0.0, max_value=1000.0, value=110.0, step=10.0)
     P_0 = sidebar.slider("Initial error covariance estimate", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
 
