@@ -49,9 +49,11 @@ def app():
     P_0 = sidebar.slider("Init. err. covariance estimate [초기 공분산 추정치, 시스템을 잘 모르면 큰 값]", min_value=0.0, max_value=20.0, value=9.0, step=0.5)
     variance = sidebar.slider("Standard Deviation of Data(for generation) [가상의 측정자료의 표준편차]", min_value=0.0, max_value=10.0, value=2.0, step=0.5)
 
-    # 스케일 고정 코드 
-    fix_y_scale = sidebar.checkbox("Fix Y-axis scale")
-    
+    # y축 범위 지정하여 고정하기 
+    if sidebar.checkbox("고정 y축 범위", value=False):
+    ymin, ymax = sidebar.slider("y축 범위", 0.0, 200.0, (0.0, 200.0))
+    ax.set_ylim(ymin, ymax)
+
     time = np.arange(0, time_end, dt)
     n_samples = len(time)
     water_meas_save = np.zeros(n_samples)
