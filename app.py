@@ -39,7 +39,7 @@ def app():
 #   st.beta_set_page_config(page_title="Kalman Filter", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
     st.sidebar.image("logo-ailab.png", use_column_width=True)
     st.sidebar.markdown("# Kalman Filter Setting")
-    st.title("칼만필터학습기 by KSH & ChatGPT")
+    st.title("칼만필터학습기 by KSH x ChatGPT")
  
     sidebar = st.sidebar
     time_end = sidebar.slider("Time end (hrs.)", min_value=1, max_value=48, value=10, step=1)
@@ -66,9 +66,9 @@ def app():
     ax.plot(time, water_meas_save, 'r*--', label='Measurements')
     ax.plot(time, water_esti_save, 'bo-', label='Kalman Filter')
     ax.legend(loc='upper left')
-    ax.set_title('Measurements v.s. Estimation (Kalman Filter)')
+    ax.set_title('Measurements versus Estimation (KF method)')
     ax.set_xlabel('Time [hrs.]')
-    ax.set_ylabel('Streamlow [CMS]')
+    ax.set_ylabel('Streamflow [CMS]')
     st.pyplot(fig)
 
 if __name__ == '__main__':
