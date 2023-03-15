@@ -76,8 +76,8 @@ def app():
     if sidebar.checkbox("체크시 y축 범위 지정 [스케일 고정]", value=False):
         ymin, ymax = sidebar.slider("y-axis [min, Max]", 0, 200, (80, 120), step=10)
         ax.set_ylim(ymin, ymax)
+        ax.set_yticks(np.arange(ymin, ymax+5, 5))
     st.pyplot(fig)
-
 
 if __name__ == '__main__':
     app()
